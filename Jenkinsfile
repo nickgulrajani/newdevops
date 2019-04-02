@@ -44,6 +44,6 @@ node {
     }
 
     stage ('Exec Maven') {
-        bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean pakage deploy/)
+        bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean package deploy/)
     }
 }
