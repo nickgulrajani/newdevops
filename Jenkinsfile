@@ -43,7 +43,7 @@ node {
         rtMaven.resolver releaseRepo:'libs-release', snapshotRepo:'libs-snapshot', server: server
     }
 
-    stage ('Exec Maven') {
-        bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean package deploy/)
+    stage ('Deploy') {
+        bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean package/)
     }
 }
