@@ -47,6 +47,6 @@ node {
         bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean package/)
     }
 	stage ('Deploy to Artifactory') {
-	build job:'artfuplaodpl'
+	build job:'artfuploadpl'
 	}
 }
