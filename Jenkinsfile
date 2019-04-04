@@ -42,8 +42,10 @@ node {
         rtMaven.deployer releaseRepo:'libs-release-local', snapshotRepo:'libs-snapshot-local', server: server
         rtMaven.resolver releaseRepo:'libs-release', snapshotRepo:'libs-snapshot', server: server
     }
-	
-    stage ('Deploy') {
-        bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean package/)
-    }
+	stage ('Deploy to Artifcatory'){
+	build job 'artfuploadpl'
+	}
+    //stage ('Deploy') {
+       // bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+    //}
 }
