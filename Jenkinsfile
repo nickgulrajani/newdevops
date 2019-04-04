@@ -39,4 +39,7 @@ node {
 	stage('Deploy to Artifactory') {
 	build job:'artfuploadpl'
 	}
+	stage ('Deploy to Staging') {
+	build job:'experiment'
+	}
 }
