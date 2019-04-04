@@ -46,6 +46,7 @@ node {
 		steps {
 		build job: 'artfuploadpl'
 		}
+		}
     stage ('Deploy') {
         bat(/"$mvnHome\bin\mvn" -Dmaven.test.failure.ignore clean package/)
     }
